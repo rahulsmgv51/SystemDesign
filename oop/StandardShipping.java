@@ -1,4 +1,4 @@
-package SOLID_Principle.oop;
+package oop;
 
 public class StandardShipping extends ShippingMethod{
 

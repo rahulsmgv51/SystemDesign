@@ -1,4 +1,4 @@
-package SOLID_Principle.oop;
+package oop;
 
 abstract class ShippingMethod {
      protected String destination;

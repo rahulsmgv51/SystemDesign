@@ -1,4 +1,4 @@
-package SOLID_Principle.oop;
+package oop;
 
 import java.util.ArrayList;
 import java.util.List;
