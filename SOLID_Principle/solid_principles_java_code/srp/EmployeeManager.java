@@ -10,9 +10,4 @@ public class EmployeeManager {
         reportService.generateReport(name);
         emailService.sendEmail(name);
     }
-
-    public static void main(String[] args) {
-        EmployeeManager manager = new EmployeeManager();
-        manager.onboardEmployee("John Doe");
-    }
 }
