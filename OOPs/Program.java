@@ -1,4 +1,4 @@
-package oop;
+package OOPs;
 
 public class Program{
     public static void main(String[] args){

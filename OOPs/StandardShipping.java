@@ -1,4 +1,4 @@
-package oop;
+package OOPs;
 
 public class StandardShipping extends ShippingMethod{
 

@@ -1,4 +1,4 @@
-package oop;
+package OOPs;
 
 abstract class ShippingMethod {
      protected String destination;

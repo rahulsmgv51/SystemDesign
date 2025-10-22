@@ -1,4 +1,4 @@
-package oop;
+package OOPs;
 
 public class StorePickup extends ShippingMethod{
 
