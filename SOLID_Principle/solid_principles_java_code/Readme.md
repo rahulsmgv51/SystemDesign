@@ -296,37 +296,6 @@ LSP	Subtypes must behave like base types	Reliable inheritance
 ISP	Clients shouldn’t depend on unused methods	Focused interfaces
 DIP	Depend on abstractions, not concretions	Loose coupling
 
-🧩 Folder Structure
-css
-
-solid-principles-java/
-├── srp/
-│   ├── EmployeeRepository.java
-│   ├── ReportService.java
-│   ├── EmailService.java
-│   └── EmployeeManager.java
-├── ocp/
-│   ├── Payment.java
-│   ├── CreditCardPayment.java
-│   ├── PaypalPayment.java
-│   └── PaymentProcessor.java
-├── lsp/
-│   ├── Bird.java
-│   ├── Flyable.java
-│   ├── Sparrow.java
-│   └── Ostrich.java
-├── isp/
-│   ├── Workable.java
-│   ├── Eatable.java
-│   ├── Human.java
-│   └── Robot.java
-├── dip/
-│   ├── MessageService.java
-│   ├── EmailService.java
-│   ├── SMSService.java
-│   ├── NotificationService.java
-│   └── Main.java
-└── README.md
 🏁 Final Thoughts
 Applying SOLID makes your Java code:
 
