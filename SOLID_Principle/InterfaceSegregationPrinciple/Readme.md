@@ -1,4 +1,4 @@
-# 🧩 Interface Segregation Principle (ISP) in Quarkus Microservice
+# 🧩 Interface Segregation Principle (ISP) in Microservice
 
 ---
 
