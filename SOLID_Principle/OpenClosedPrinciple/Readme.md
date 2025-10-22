@@ -57,7 +57,6 @@ public interface PaymentProcessor {
 }
 2️⃣ Implement Separate Classes for Each Payment Type
 java
-Copy code
 @ApplicationScoped
 public class CreditCardPaymentProcessor implements PaymentProcessor {
     @Override
@@ -66,7 +65,6 @@ public class CreditCardPaymentProcessor implements PaymentProcessor {
     }
 }
 java
-Copy code
 @ApplicationScoped
 public class UpiPaymentProcessor implements PaymentProcessor {
     @Override
@@ -75,7 +73,6 @@ public class UpiPaymentProcessor implements PaymentProcessor {
     }
 }
 java
-Copy code
 @ApplicationScoped
 public class NetBankingPaymentProcessor implements PaymentProcessor {
     @Override
@@ -85,7 +82,6 @@ public class NetBankingPaymentProcessor implements PaymentProcessor {
 }
 3️⃣ Payment Factory or Strategy Selector
 java
-Copy code
 @ApplicationScoped
 public class PaymentFactory {
 
@@ -103,7 +99,6 @@ public class PaymentFactory {
 }
 4️⃣ Main Service (Closed for Modification)
 java
-Copy code
 @ApplicationScoped
 public class PaymentService {
 
@@ -121,7 +116,6 @@ Now, if a new payment method is added (e.g., PayPal),
 
 🧱 Architecture Diagram
 scss
-Copy code
                     │  (uses factory)      │
                     └─────────┬────────────┘
                               │
