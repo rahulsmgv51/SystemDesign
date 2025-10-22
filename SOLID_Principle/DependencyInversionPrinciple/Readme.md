@@ -1,4 +1,4 @@
-# 🏗️ Dependency Inversion Principle (DIP) in Quarkus Microservice
+# 🏗️ Dependency Inversion Principle (DIP) in Microservice
 
 ---
 
@@ -40,8 +40,7 @@ public class EmailService {
 }
 Now our NotificationService uses it directly:
 
-java
-Copy code
+
 @ApplicationScoped
 public class NotificationService {
     private final EmailService emailService = new EmailService();
@@ -61,14 +60,12 @@ Hard to mock or test since dependency is tightly coupled.
 We introduce an abstraction (interface) and use Dependency Injection.
 
 1️⃣ Define an Abstraction
-java
-Copy code
+
 public interface MessageService {
     void sendMessage(String message);
 }
 2️⃣ Create Concrete Implementations
-java
-Copy code
+
 @ApplicationScoped
 public class EmailService implements MessageService {
     @Override
@@ -76,8 +73,7 @@ public class EmailService implements MessageService {
         System.out.println("📧 Sending Email: " + message);
     }
 }
-java
-Copy code
+
 @ApplicationScoped
 public class SMSService implements MessageService {
     @Override
@@ -86,8 +82,7 @@ public class SMSService implements MessageService {
     }
 }
 3️⃣ High-Level Module Depends on Abstraction
-java
-Copy code
+
 @ApplicationScoped
 public class NotificationService {
 
@@ -107,8 +102,7 @@ Now NotificationService depends on MessageService (an interface), not on EmailSe
 4️⃣ Configure Implementation (Quarkus CDI)
 You can choose which implementation to inject using CDI qualifiers:
 
-java
-Copy code
+
 @Qualifier
 @Retention(RUNTIME)
 @Target({TYPE, METHOD, FIELD, PARAMETER})
@@ -120,8 +114,7 @@ public @interface EmailChannel {}
 public @interface SMSChannel {}
 Then annotate implementations:
 
-java
-Copy code
+
 @EmailChannel
 @ApplicationScoped
 public class EmailService implements MessageService {
@@ -130,8 +123,7 @@ public class EmailService implements MessageService {
         System.out.println("📧 Email sent: " + message);
     }
 }
-java
-Copy code
+
 @SMSChannel
 @ApplicationScoped
 public class SMSService implements MessageService {
@@ -142,8 +134,7 @@ public class SMSService implements MessageService {
 }
 And inject selectively:
 
-java
-Copy code
+
 @ApplicationScoped
 public class NotificationService {
 
@@ -158,8 +149,7 @@ public class NotificationService {
 ✅ Now we can easily switch between SMS, Email, or any new service without changing core logic.
 
 🧱 Architecture Diagram
-scss
-Copy code
+
                       ┌────────────────────────┐
                       │    NotificationService │   ← High-level module
                       └───────────┬────────────┘
@@ -202,7 +192,7 @@ Principle	Description
 SRP	One class = one reason to change
 OCP	Open for extension, closed for modification
 LSP	Subclasses should substitute their base types
-ISP	Don't force classes to depend on unused methods
+ISP	Do not force classes to depend on unused methods
 DIP	High-level and low-level modules depend on abstractions
 
 🏁 Summary
@@ -217,8 +207,6 @@ Qualifiers for multiple implementations
 Separation of business logic and infrastructure code
 
 💻 Example Folder Structure
-css
-Copy code
 src/
 └── main/
     ├── java/
@@ -233,11 +221,4 @@ src/
     │       └── Application.java
     └── resources/
         └── application.properties
-Author: [Your Name]
-Tech Stack: Quarkus · Java · SOLID · Microservices Architecture
-License: MIT
-
-yaml
-Copy code
-
 ---
