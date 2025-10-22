@@ -1,4 +1,4 @@
-# 🧩 Open/Closed Principle (OCP) in Quarkus Microservice
+# 🧩 Open/Closed Principle (OCP) in Microservice
 
 ---
 
@@ -178,8 +178,6 @@ Extend logic safely using interfaces, factories, or strategies
 Avoid risky modifications to core business classes
 
 💻 Example Folder Structure
-css
-Copy code
 src/
 └── main/
     │   │   ├── service/
