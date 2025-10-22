@@ -304,7 +304,4 @@ Applying SOLID makes your Java code:
 ✅ Extensible without fear of breaking things
 ✅ Testable and reusable
 
-Remember:
-
-“Code that follows SOLID is code that can grow without chaos.”
 ---
