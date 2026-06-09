@@ -1,2 +1,0 @@
-# SystemDesign
-- Solid Principles
