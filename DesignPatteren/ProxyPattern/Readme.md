@@ -366,7 +366,7 @@ Proxy
 
 ## Real-World Banking Example
 
-### AEPS / 3PCD Transaction Flow
+### Transaction Flow
 
 ```text
 Agent Device
@@ -381,7 +381,7 @@ Transaction Proxy Service
       +--> Audit Logs
       |
       v
-NPCI / CBS
+    Bank
 ```
 
 ### Responsibilities of Transaction Proxy
